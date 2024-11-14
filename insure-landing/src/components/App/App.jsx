@@ -1,12 +1,16 @@
-import { useState } from "react";
-import "./App.css";
+import Nav from "../Nav/Nav";
+import Plans from "../Plans/Plans";
+import Blog from "../Blog/Blog";
+import Work from "../Work/Work";
 import Footer from "../Footer/Footer";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
+      <Nav />
+      <Plans />
+      <Blog />
+      <Work />
       <Footer />
     </>
   );
