@@ -11,7 +11,6 @@ This is a solution to the [Insure landing page challenge on Frontend Mentor](htt
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 
 ## Overview
@@ -31,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://your-solution-url.com)
+- [Solution URL](https://github.com/heejung-hong/insure-landing-page)
 - [Live Site URL](https://your-live-site-url.com)
 
 ## My process
@@ -45,34 +44,65 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+From this project I learned that the hover state does not work when the component z index is below the root. I had to remove the negative z index numbers so that the hover state would work.
 
-To see how you can add code snippets, see below:
+I also learned to conditionally render different parts of the mobile nav.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+```jsx
+{
+  nav ? (
+    <FontAwesomeIcon
+      icon={faXmark}
+      className="text-black m-auto w-[16px] h-[16px] "
+    />
+  ) : (
+    <FontAwesomeIcon
+      icon={faBars}
+      className="text-black m-auto w-[16px] h-[16px]"
+    />
+  );
+}
 
-```css
-.proud-of-this-css {
-  color: papayawhip;
+{
+  nav ? (
+    <>
+      <div className="static w-[375] h-[587px] bg-violet-dk-v pt-[40px] desktop:hidden">
+        <div
+          className=" static w-[327px] h-[56px] m-auto content-center font-bold text-[20px] leading-[40px] tracking-[1.36px] text-white hover:border-solid hover:border-2 hover:border-white cursor-pointer"
+          onClick={handleNav}
+        >
+          HOW WE WORK
+        </div>
+        <div
+          className="w-[327px] h-[56px] m-auto mt-[20px] content-center font-bold text-[20px] leading-[40px] tracking-[1.36px] text-white hover:border-solid hover:border-2 hover:border-white cursor-pointer"
+          onClick={handleNav}
+        >
+          BLOG
+        </div>
+        <div
+          className="w-[327px] h-[56px] m-auto mt-[20px]  content-center font-bold text-[20px] leading-[40px] tracking-[1.36px] text-white hover:border-solid hover:border-2 hover:border-white cursor-pointer"
+          onClick={handleNav}
+        >
+          ACCOUNT
+        </div>
+        <div
+          className="w-[327px] h-[56px] m-auto mt-[20px]  content-center font-bold text-[20px] leading-[40px] tracking-[1.36px] text-white hover:border-solid hover:border-2 hover:border-white cursor-pointer"
+          onClick={handleNav}
+        >
+          VIEW PLANS
+        </div>
+        <img src={bgmobilenav} alt="wave lines" className="absolute bottom-0" />
+      </div>
+    </>
+  ) : (
+    <></>
+  );
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Mobile nav functionality](https://medium.com/@ryaddev/build-responsive-navbar-with-tailwind-css-and-react-icons-3b13a272dec4) - This helped me to create the mobile nav functionality.
 
 ## Author
 
