@@ -11,6 +11,7 @@ This is a solution to the [Insure landing page challenge on Frontend Mentor](htt
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 
 ## Overview
@@ -26,12 +27,16 @@ Users should be able to:
 
 #### Desktop View
 
+![Screenshot 2024-11-19 at 10 40 08 AM](https://github.com/user-attachments/assets/629af9ee-9bad-4953-b6c1-0b7275f616e4)
+
 #### Mobile View
+
+![Screenshot 2024-11-19 at 10 44 22 AM](https://github.com/user-attachments/assets/8f3394a6-1e02-4fae-93c0-9267c4180b1b)
 
 ### Links
 
 - [Solution URL](https://github.com/heejung-hong/insure-landing-page)
-- [Live Site URL](https://your-live-site-url.com)
+- [Live Site URL](https://heejung-hong.github.io/insure-landing-page/)
 
 ## My process
 
@@ -41,6 +46,7 @@ Users should be able to:
 - [React](https://reactjs.org/) - JS library
 - [Vite](https://vite.dev/) - React framework
 - [Tailwind](https://tailwindcss.com/) - For styles
+- [Fontawesome](https://docs.fontawesome.com/web/use-with/react) - Icons
 
 ### What I learned
 
@@ -99,6 +105,10 @@ I also learned to conditionally render different parts of the mobile nav.
   );
 }
 ```
+
+### Continued development
+
+I would like to built the nav bar where the nav menu doesn't push down the content of the homepage but float on top of it.
 
 ### Useful resources
 
